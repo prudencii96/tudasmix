@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="hatter.css">
+    <title>Ha egy kis zenére vágynál</title>
+</head>
+<body>
+    <a href="index.html">Főoldal</a>
+    <h1>Klasszikus zenebox</h1>
+    <ul id="playlist">
+        <li data-src="zene.mp3">MOZART FACILE SONATA </li>
+        <li data-src="zene2.mp3">MOZART: Török induló</li>
+        <li data-src="zene3.mp3">VIVADI:Négy évszak: Tél</li>
+        
+        
+    </ul>
+    <audio id="audio" controls></audio>
+
+    <script>
+        // Elemi hivatkozások
+        const audio = document.getElementById('audio');
+        const playlist = document.getElementById('playlist');
+        const tracks = playlist.querySelectorAll('li');
+        let currentTrack = 0;
+
+        // Funkció a lejátszási lista elindításához
+        function playTrack(index) {
+            const track = tracks[index];
+            if (!track) return; // Ha nincs több zene, kilépünk
+            audio.src = track.getAttribute('data-src');
+            audio.play();
+            currentTrack = index;
+        }
+
+        // Automatikus folytatás, ha a zene véget ér
+        audio.addEventListener('ended', () => {
+            if (currentTrack + 1 < tracks.length) {
+                playTrack(currentTrack + 1);
+            }
+        });
+
+        // Lejátszás indítása az első zeneszámmal
+        playTrack(0);
+    </script> <br>
+    <br>
+    Zongora 88 billentyűje <br>
+    <img src="hangokk.png" alt="hangok"> <br>
+    <br>
+
+    Dúrok és Párhuzamos molljaik avagy a Kvintkör <br>
+    <img src="kvint.png" alt="Kvintkor">
+    forrás: wikipedia.org
+     <br>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Több Kvíz</title>
+    <link rel="stylesheet" href="hatter.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="index.html">Főoldal</a>
+    <div id="quiz1-container">
+        <h1>Kvíz 1: Bolygók</h1>
+        <form id="quiz1-form">
+            <p>1. Melyik a Naprendszer legnagyobb bolygója?</p>
+            <label><input type="radio" name="választott" value="Mars"> Mars</label><br>
+            <label><input type="radio" name="választott" value="Jupiter"> Jupiter</label><br>
+            <label><input type="radio" name="választott" value="Föld"> Föld</label><br>
+            <button type="button" class="submit-btn" data-quiz="quiz1">Eredmény</button>
+        </form>
+        <div class="result" id="quiz1-result" style="display:none;">
+            <h3>Eredmény:</h3>
+            <p id="quiz1-score"></p>
+        </div>
+    </div>
+
+    <div id="quiz2-container">
+        <h1>Kvíz 2: Történelem</h1>
+        <form id="quiz2-form">
+            <p>1. Mikor volt a magyar honfoglalás?</p>
+            <label><input type="radio" name="választott" value="896"> 896</label><br>
+            <label><input type="radio" name="választott" value="1000"> 1000</label><br>
+            <label><input type="radio" name="választott" value="1848"> 1848</label><br>
+            <button type="button" class="submit-btn" data-quiz="quiz2">Eredmény</button>
+        </form>
+        <div class="result" id="quiz2-result" style="display:none;">
+            <h3>Eredmény:</h3>
+            <p id="quiz2-score"></p>
+        </div>
+    </div>
+
+    <div id="quiz3-container">
+        <h1>Kvíz 3: Biosz</h1>
+        <form id="quiz3-form">
+            <p>1. Hány lába van a bogárnak?</p>
+            <label><input type="radio" name="választott" value="6">6</label><br>
+            <label><input type="radio" name="választott" value="8"> 8</label><br>
+            <label><input type="radio" name="választott" value="4"> 4</label><br>
+            <button type="button" class="submit-btn" data-quiz="quiz3">Eredmény</button>
+        </form>
+        <div class="result" id="quiz3-result" style="display:none;">
+            <h3>Eredmény:</h3>
+            <p id="quiz3-score"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
